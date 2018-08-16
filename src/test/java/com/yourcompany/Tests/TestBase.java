@@ -47,7 +47,7 @@ public class TestBase  {
      *
      * @param testMethod
      * @return Two dimensional array of objects with browser, version, and platform information
-     */
+     
     @DataProvider(name = "hardCodedBrowsers", parallel = true)
     public static Object[][] sauceBrowserDataProvider(Method testMethod) {
         return new Object[][]{
@@ -59,7 +59,7 @@ public class TestBase  {
                 new Object[]{"firefox", "latest-1", "Windows 7"},
         };
     }
-
+*/
     /**
      * @return the {@link WebDriver} for the current thread
      */
