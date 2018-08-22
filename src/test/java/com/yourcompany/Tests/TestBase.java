@@ -11,7 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-/** import org.testng.annotations.DataProvider; */
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 
 import java.lang.reflect.Method;
@@ -47,7 +47,8 @@ public class TestBase  {
      *
      * @param testMethod
      * @return Two dimensional array of objects with browser, version, and platform information
-     
+     */
+    
     @DataProvider(name = "hardCodedBrowsers", parallel = true)
     public static Object[][] sauceBrowserDataProvider(Method testMethod) {
         return new Object[][]{
@@ -59,7 +60,7 @@ public class TestBase  {
                 new Object[]{"firefox", "latest-1", "Windows 7"},
         };
     }
-*/
+
     /**
      * @return the {@link WebDriver} for the current thread
      */
